@@ -1,0 +1,542 @@
+{
+    "London": {
+        "data": [
+            {
+                "date": "2024-03-13",
+                "max_temp": 14.3,
+                "min_temp": 10.5,
+                "humidity": 82.3,
+                "Description": "Cloudy skies throughout the day."
+            },
+            {
+                "date": "2024-03-14",
+                "max_temp": 13.7,
+                "min_temp": 9.5,
+                "humidity": 85.2,
+                "Description": "Cloudy skies throughout the day."
+            },
+            {
+                "date": "2024-03-15",
+                "max_temp": 13.7,
+                "min_temp": 10.1,
+                "humidity": 83.9,
+                "Description": "Partly cloudy throughout the day with a chance of rain."
+            },
+            {
+                "date": "2024-03-16",
+                "max_temp": 12.7,
+                "min_temp": 8.4,
+                "humidity": 74.0,
+                "Description": "Partly cloudy throughout the day with a chance of rain."
+            },
+            {
+                "date": "2024-03-17",
+                "max_temp": 15.6,
+                "min_temp": 9.2,
+                "humidity": 87.3,
+                "Description": "Cloudy skies throughout the day with rain clearing later."
+            },
+            {
+                "date": "2024-03-18",
+                "max_temp": 15.1,
+                "min_temp": 7.7,
+                "humidity": 70.4,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-19",
+                "max_temp": 13.3,
+                "min_temp": 9.5,
+                "humidity": 83.6,
+                "Description": "Cloudy skies throughout the day."
+            }
+        ],
+        "timestamp": "2024-03-13T15:05:51.646288"
+    },
+    "israel": {
+        "data": [
+            {
+                "date": "2024-03-13",
+                "max_temp": 25.5,
+                "min_temp": 9.6,
+                "humidity": 44.3,
+                "Description": "Clear conditions throughout the day."
+            },
+            {
+                "date": "2024-03-14",
+                "max_temp": 18.9,
+                "min_temp": 10.1,
+                "humidity": 56.5,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-15",
+                "max_temp": 18.1,
+                "min_temp": 9.0,
+                "humidity": 57.5,
+                "Description": "Clear conditions throughout the day."
+            },
+            {
+                "date": "2024-03-16",
+                "max_temp": 19.2,
+                "min_temp": 8.4,
+                "humidity": 50.1,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-17",
+                "max_temp": 24.8,
+                "min_temp": 13.6,
+                "humidity": 45.1,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-18",
+                "max_temp": 17.7,
+                "min_temp": 11.3,
+                "humidity": 71.8,
+                "Description": "Cloudy skies throughout the day with a chance of rain."
+            },
+            {
+                "date": "2024-03-19",
+                "max_temp": 13.3,
+                "min_temp": 9.9,
+                "humidity": 79.9,
+                "Description": "Partly cloudy throughout the day with a chance of rain throughout the day."
+            }
+        ],
+        "timestamp": "2024-03-13T15:06:51.378508"
+    },
+    "madrid": {
+        "data": [
+            {
+                "date": "2024-03-13",
+                "max_temp": 18.5,
+                "min_temp": 4.1,
+                "humidity": 64.6,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-14",
+                "max_temp": 15.2,
+                "min_temp": 6.8,
+                "humidity": 75.1,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-15",
+                "max_temp": 18.2,
+                "min_temp": 6.4,
+                "humidity": 77.7,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-16",
+                "max_temp": 19.9,
+                "min_temp": 6.4,
+                "humidity": 72.1,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-17",
+                "max_temp": 20.8,
+                "min_temp": 8.1,
+                "humidity": 65.8,
+                "Description": "Cloudy skies throughout the day."
+            },
+            {
+                "date": "2024-03-18",
+                "max_temp": 18.8,
+                "min_temp": 12.3,
+                "humidity": 62.7,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-19",
+                "max_temp": 16.3,
+                "min_temp": 10.5,
+                "humidity": 69.2,
+                "Description": "Partly cloudy throughout the day."
+            }
+        ],
+        "timestamp": "2024-03-13T15:07:24.552657"
+    },
+    "Iraq": {
+        "data": [
+            {
+                "date": "2024-03-13",
+                "max_temp": 24.7,
+                "min_temp": 8.0,
+                "humidity": 34.8,
+                "Description": "Clear conditions throughout the day."
+            },
+            {
+                "date": "2024-03-14",
+                "max_temp": 29.6,
+                "min_temp": 13.4,
+                "humidity": 27.9,
+                "Description": "Becoming cloudy in the afternoon."
+            },
+            {
+                "date": "2024-03-15",
+                "max_temp": 29.9,
+                "min_temp": 15.3,
+                "humidity": 36.9,
+                "Description": "Clearing in the afternoon with a chance of rain."
+            },
+            {
+                "date": "2024-03-16",
+                "max_temp": 26.2,
+                "min_temp": 16.3,
+                "humidity": 35.8,
+                "Description": "Partly cloudy throughout the day with a chance of rain."
+            },
+            {
+                "date": "2024-03-17",
+                "max_temp": 26.3,
+                "min_temp": 12.8,
+                "humidity": 34.3,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-18",
+                "max_temp": 22.4,
+                "min_temp": 17.5,
+                "humidity": 30.9,
+                "Description": "Cloudy skies throughout the day with a chance of rain."
+            },
+            {
+                "date": "2024-03-19",
+                "max_temp": 18.8,
+                "min_temp": 15.6,
+                "humidity": 79.0,
+                "Description": "Partly cloudy throughout the day with a chance of rain."
+            }
+        ],
+        "timestamp": "2024-03-13T15:09:31.115945"
+    },
+    "mali": {
+        "data": [
+            {
+                "date": "2024-03-13",
+                "max_temp": 40.5,
+                "min_temp": 25.0,
+                "humidity": 18.1,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-14",
+                "max_temp": 41.1,
+                "min_temp": 24.4,
+                "humidity": 12.6,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-15",
+                "max_temp": 41.2,
+                "min_temp": 25.5,
+                "humidity": 11.7,
+                "Description": "Clear conditions throughout the day."
+            },
+            {
+                "date": "2024-03-16",
+                "max_temp": 41.4,
+                "min_temp": 26.3,
+                "humidity": 9.4,
+                "Description": "Clear conditions throughout the day."
+            },
+            {
+                "date": "2024-03-17",
+                "max_temp": 40.4,
+                "min_temp": 22.9,
+                "humidity": 8.2,
+                "Description": "Clear conditions throughout the day."
+            },
+            {
+                "date": "2024-03-18",
+                "max_temp": 40.4,
+                "min_temp": 22.8,
+                "humidity": 7.7,
+                "Description": "Clear conditions throughout the day."
+            },
+            {
+                "date": "2024-03-19",
+                "max_temp": 40.8,
+                "min_temp": 22.9,
+                "humidity": 7.8,
+                "Description": "Partly cloudy throughout the day."
+            }
+        ],
+        "timestamp": "2024-03-13T15:11:05.239410"
+    },
+    "ashdod": {
+        "data": [
+            {
+                "date": "2024-03-13",
+                "max_temp": 25.0,
+                "min_temp": 10.0,
+                "humidity": 64.7,
+                "Description": "Clear conditions throughout the day."
+            },
+            {
+                "date": "2024-03-14",
+                "max_temp": 20.1,
+                "min_temp": 10.1,
+                "humidity": 80.4,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-15",
+                "max_temp": 20.3,
+                "min_temp": 9.3,
+                "humidity": 78.6,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-16",
+                "max_temp": 20.3,
+                "min_temp": 7.9,
+                "humidity": 74.0,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-17",
+                "max_temp": 23.9,
+                "min_temp": 12.6,
+                "humidity": 72.6,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-18",
+                "max_temp": 17.1,
+                "min_temp": 13.4,
+                "humidity": 82.4,
+                "Description": "Cloudy skies throughout the day with a chance of rain."
+            },
+            {
+                "date": "2024-03-19",
+                "max_temp": 17.0,
+                "min_temp": 12.5,
+                "humidity": 75.7,
+                "Description": "Partly cloudy throughout the day with a chance of rain throughout the day."
+            }
+        ],
+        "timestamp": "2024-03-13T15:13:30.699140"
+    },
+    "holon": {
+        "data": [
+            {
+                "date": "2024-03-13",
+                "max_temp": 25.0,
+                "min_temp": 10.0,
+                "humidity": 62.5,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-14",
+                "max_temp": 20.1,
+                "min_temp": 11.3,
+                "humidity": 77.2,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-15",
+                "max_temp": 20.1,
+                "min_temp": 11.0,
+                "humidity": 76.1,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-16",
+                "max_temp": 21.2,
+                "min_temp": 9.3,
+                "humidity": 70.1,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-17",
+                "max_temp": 26.5,
+                "min_temp": 13.0,
+                "humidity": 64.6,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-18",
+                "max_temp": 17.6,
+                "min_temp": 14.9,
+                "humidity": 80.4,
+                "Description": "Cloudy skies throughout the day with a chance of rain."
+            },
+            {
+                "date": "2024-03-19",
+                "max_temp": 17.0,
+                "min_temp": 14.3,
+                "humidity": 72.2,
+                "Description": "Clear conditions throughout the day with a chance of rain throughout the day."
+            }
+        ],
+        "timestamp": "2024-03-13T15:21:16.625354"
+    },
+    "jerusalem": {
+        "data": [
+            {
+                "date": "2024-03-13",
+                "max_temp": 25.5,
+                "min_temp": 9.6,
+                "humidity": 44.3,
+                "Description": "Clear conditions throughout the day."
+            },
+            {
+                "date": "2024-03-14",
+                "max_temp": 18.9,
+                "min_temp": 10.1,
+                "humidity": 56.5,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-15",
+                "max_temp": 18.1,
+                "min_temp": 9.0,
+                "humidity": 57.5,
+                "Description": "Clear conditions throughout the day."
+            },
+            {
+                "date": "2024-03-16",
+                "max_temp": 19.2,
+                "min_temp": 8.4,
+                "humidity": 50.1,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-17",
+                "max_temp": 24.8,
+                "min_temp": 13.6,
+                "humidity": 45.1,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-18",
+                "max_temp": 17.7,
+                "min_temp": 11.3,
+                "humidity": 71.8,
+                "Description": "Cloudy skies throughout the day with a chance of rain."
+            },
+            {
+                "date": "2024-03-19",
+                "max_temp": 13.3,
+                "min_temp": 9.9,
+                "humidity": 79.9,
+                "Description": "Partly cloudy throughout the day with a chance of rain throughout the day."
+            }
+        ],
+        "timestamp": "2024-03-13T15:21:24.820962"
+    },
+    "berlin": {
+        "data": [
+            {
+                "date": "2024-03-13",
+                "max_temp": 13.8,
+                "min_temp": 4.0,
+                "humidity": 72.0,
+                "Description": "Becoming cloudy in the afternoon."
+            },
+            {
+                "date": "2024-03-14",
+                "max_temp": 15.6,
+                "min_temp": 9.3,
+                "humidity": 77.2,
+                "Description": "Cloudy skies throughout the day."
+            },
+            {
+                "date": "2024-03-15",
+                "max_temp": 17.0,
+                "min_temp": 8.6,
+                "humidity": 80.6,
+                "Description": "Partly cloudy throughout the day with afternoon rain."
+            },
+            {
+                "date": "2024-03-16",
+                "max_temp": 14.1,
+                "min_temp": 8.1,
+                "humidity": 78.8,
+                "Description": "Partly cloudy throughout the day with a chance of rain."
+            },
+            {
+                "date": "2024-03-17",
+                "max_temp": 9.4,
+                "min_temp": 3.2,
+                "humidity": 63.9,
+                "Description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-18",
+                "max_temp": 10.6,
+                "min_temp": 5.8,
+                "humidity": 78.2,
+                "Description": "Cloudy skies throughout the day."
+            },
+            {
+                "date": "2024-03-19",
+                "max_temp": 14.2,
+                "min_temp": 6.8,
+                "humidity": 81.3,
+                "Description": "Cloudy skies throughout the day."
+            }
+        ],
+        "timestamp": "2024-03-13T15:21:45.353515"
+    },
+    "Romania": {
+        "data": [
+            {
+                "date": "2024-03-13",
+                "max_temp": 10.8,
+                "min_temp": 7.3,
+                "humidity": 93.5,
+                "description": "Cloudy skies throughout the day with a chance of rain throughout the day."
+            },
+            {
+                "date": "2024-03-14",
+                "max_temp": 9.2,
+                "min_temp": 5.4,
+                "humidity": 75.9,
+                "description": "Cloudy skies throughout the day with late afternoon rain."
+            },
+            {
+                "date": "2024-03-15",
+                "max_temp": 8.9,
+                "min_temp": 5.0,
+                "humidity": 83.3,
+                "description": "Cloudy skies throughout the day with early morning rain."
+            },
+            {
+                "date": "2024-03-16",
+                "max_temp": 13.4,
+                "min_temp": 4.7,
+                "humidity": 74.2,
+                "description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-17",
+                "max_temp": 15.9,
+                "min_temp": 5.5,
+                "humidity": 68.4,
+                "description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-18",
+                "max_temp": 17.4,
+                "min_temp": 10.6,
+                "humidity": 51.5,
+                "description": "Partly cloudy throughout the day."
+            },
+            {
+                "date": "2024-03-19",
+                "max_temp": 17.4,
+                "min_temp": 9.7,
+                "humidity": 49.2,
+                "description": "Cloudy skies throughout the day."
+            }
+        ],
+        "timestamp": "2024-03-13T16:09:28.891283"
+    }
+}

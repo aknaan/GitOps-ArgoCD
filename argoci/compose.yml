@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: weather_app
+    ports:
+      - "80:80" 
+    restart: always
+

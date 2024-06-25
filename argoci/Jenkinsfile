@@ -1,0 +1,147 @@
+pipeline {
+    
+    agent {
+        label 'agent1'
+    }
+    
+     environment {
+        DOCKERHUB_CREDENTIALS=credentials('Jenkins_dockerhub')
+	IMAGESIGN=credentials('sign-image-password')
+        ERROR='none'
+	COMMIT='none'
+    }
+	stages {	
+	stage('OWASP Dependency Scan') {	
+		steps {
+             	dependencyCheck additionalArguments: '''
+            	-o '.'
+                -s './project/requirements.txt'
+                -f 'ALL'
+                --enableExperimental
+                --failOnCVSS 2
+                --prettyPrint''', odcInstallation: 'OWASP Dependency Scan'
+                dependencyCheckPublisher (
+                            pattern: 'dependency-check-report.xml',
+                            failedTotalHigh: 2,
+                            failedTotalCritical: 1
+                        )
+                    }
+              }
+
+	stage('Dockerfile scan') {
+		steps {
+			script {
+				try {
+					sh 'trivy config --severity CRITICAL --exit-code 1 Dockerfile'
+				}
+				catch(error){
+                        		ERROR='Build failed'
+                        		throw error
+                    		}
+			}
+		}
+	}	
+        
+	stage('static code analysis') {
+		steps{	
+			script{
+
+			try {
+				sh 'docker build -t pylint-image -f static.Dockerfile --no-cache .'
+                		sh 'docker run -d -v ./static:/project/codeanalysis/ -p 80:80 pylint-image'
+			}		
+			
+			catch(error) {
+				 ERROR='Build failed'
+                                 throw error
+				}		
+			}	
+		}
+	}
+
+        stage('Build') {
+            steps {
+                script{
+                    try{
+                        sh 'docker build -t weather_app --no-cache .'
+                        sh 'docker run -d -p 80:80 --restart unless-stopped weather_app'
+                    }
+                    
+                    catch(error){
+                        ERROR='Build failed'
+                        throw error
+                    }
+                    
+                }
+            }
+        }
+        
+        stage('test') {
+            steps {
+                script{
+                    try{
+                        dir('tests') {
+                        sh 'pip install -r requirements.txt --break-system-packages'
+                        sh 'python3 -m pytest test2.py'
+                        }
+                    }
+                    
+                    catch(error){
+                        ERROR='testing failed'
+                        throw error
+                    }
+                }
+            }
+            
+        }
+        
+        stage('Login to Docker Hub') {         
+            steps{
+                script{
+                    try{
+                        sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+                    }
+                    catch(error){
+                        ERROR='Login to dockerhub failed'
+                        throw error
+                    }
+                }
+            }           
+        } 
+        
+        stage('Push Image to Docker Hub') {         
+            steps{
+                script{
+                    try{
+			def commit_hash=sh(returnStdout: true, script: "git log -1 --pretty=format:%h")
+			COMMIT="${commit_hash}"
+                        sh "docker tag weather_app aknaan/weather_app:${env.BUILD_NUMBER}_${commit_hash}"
+                        sh "echo $IMAGESIGN | docker trust sign aknaan/weather_app:${env.BUILD_NUMBER}_${commit_hash}"
+                    }
+                
+                    catch(error){
+                        ERROR='Push to dockerhub failed'
+                        throw error
+                    }
+                }
+            }           
+        }
+    }
+   
+        post {
+            success {
+                slackSend color: "good", message: "Status of Pipeline:\n${currentBuild.currentResult} ${env.JOB_NAME} \nbuild-number:\n${env.BUILD_NUMBER}_${COMMIT}"
+            }
+       
+            failure {
+                slackSend channel: 'devops-alerts', message: "$ERROR"
+            }
+            always {
+                sh 'docker stop $(docker ps -a -q)'
+		sh 'docker rm $(docker ps -a -q)'
+                sh 'docker rmi -f $(docker images -a -q)'
+		sh 'docker system prune -f'
+
+            }
+        }
+}

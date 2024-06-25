@@ -1,0 +1,57 @@
+pipeline {
+    
+    agent {
+        label 'agent1'
+    }
+    
+     environment {
+        ERROR='none'
+	def IMAGE_HUSH=sh(returnStdout: true, script: "curl -s https://registry.hub.docker.com/v2/repositories/aknaan/weather_app/tags/ | jq -r '.results[0].name'")
+    }
+	stages {	  
+	stage('pull deployment from SCM') {
+		steps {
+			script{
+				try {
+					sh "git checkout main"
+					sh "git pull origin main"
+				}
+				catch(error){
+					ERROR='Push to dockerhub failed'
+                        		throw error
+				}
+			}
+		}
+	}
+
+	stage('Update Image in SCM') {         
+            steps{
+                script{
+                    try{
+			withCredentials([gitUsernamePassword(credentialsId: 'gitlab-auth', gitToolName: 'Default')]){
+                            sh '''#!/bin/bash
+                            IMAGE_TAG="${IMAGE_HUSH}" envsubst '${IMAGE_TAG}' < deployment.yaml > ./weather_app_deployment/final_deployment.yaml'''
+                            sh 'git add .'
+                            sh 'git commit -m "update image"'
+                            sh 'git push origin main'
+			}
+                        }   catch (error) {
+                            ERROR = 'Push to SCM failed'
+                            throw error
+                        	}
+                	}
+            	}	           
+        	}
+    	}
+   
+        post {
+            success {
+                slackSend color: "good", message: "Status of Pipeline:\n${currentBuild.currentResult} ${env.JOB_NAME} \nbuild-number:\n${IMAGE_HUSH}"
+            }
+       
+            failure {
+                slackSend channel: 'devops-alerts', message: "$ERROR"
+            }
+        }
+}
+
